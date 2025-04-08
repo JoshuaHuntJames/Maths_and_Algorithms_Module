@@ -1,19 +1,32 @@
 #pragma once
+#define _USE_MATH_DEFINES 
+#include <cmath>
+#include <math.h>
 namespace MathUtils
 {
 
 	static float toRad(float Deg)
 	{
-		return 0.0f;
+		float Rad = 0;
+		Rad = Deg * M_PI / 180;
+
+		return Rad;
 	}
 	static float toDeg(float Rad)
 	{
-		return 0.0f;
+		float Deg = 90;
+		Deg = Rad * 180 / M_PI;
+
+		return Deg;
 	}
 
 	static float Pythagoras(float A, float B)
 	{
-		return 0.0f;
+		float C = 0;
+		C = pow(A, 2) + pow(B, 2);
+		C = sqrt(C);
+
+		return C;
 	}
 	static float FindSinTheta(float A, float B)
 	{
