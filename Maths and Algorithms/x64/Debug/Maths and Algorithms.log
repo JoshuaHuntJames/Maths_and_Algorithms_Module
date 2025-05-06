@@ -1,0 +1,5 @@
+﻿  Maths and Algorithms.cpp
+C:\Users\Games\Documents\GitHub\Maths_and_Algorithms_Module\Maths and Algorithms\Maths.h(11,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Games\Documents\GitHub\Maths_and_Algorithms_Module\Maths and Algorithms\Maths.h(18,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Games\Documents\GitHub\Maths_and_Algorithms_Module\Maths and Algorithms\Maths.h(26,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Maths and Algorithms.vcxproj -> C:\Users\Games\Documents\GitHub\Maths_and_Algorithms_Module\x64\Debug\Maths and Algorithms.exe
