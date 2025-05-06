@@ -43,6 +43,14 @@ int main()
         std::cout << "it broken" << std::endl;
         std::cout << c << std::endl;
     }
+
+
+
+
+    //stack
+   /*  Stack<int>*  mystack = new Stack<int>();
+     mystack->Pop();*/
+
 }
 
 

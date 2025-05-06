@@ -10,10 +10,13 @@ public:
     T* Data;
     size_t Size;
 
+    int Count = 0;
+
+    Stack();
+
     T Pop();
     T Peek();
     void Push(T dataToPush);
-
 };
 
 template <typename T>
@@ -23,6 +26,8 @@ public:
 
     T* Data;
     size_t Size;
+
+    Queue();
 
     T Pop();
     T Peek();
