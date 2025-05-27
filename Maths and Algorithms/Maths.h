@@ -30,11 +30,11 @@ namespace MathUtils
 	}
 	static float FindSinTheta(float A, float B)
 	{
-		return 0.0f;
+		return A / B;
 	}
 	static float FindCosTheta(float A, float B)
 	{
-		return 0.0f;
+		
 	}
 	static float FindTanTheta(float A, float B)
 	{

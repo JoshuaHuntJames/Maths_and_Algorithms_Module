@@ -1,4 +1,19 @@
+//#include <iostream>
+
 #include "DataStructures.h"
+
+#include <iostream>
+
+#include "Algorithms.h"
+#include "DataStructures.h"
+#include "Maths.h"
+#include "Matrix.h"
+#include "Vector.h"
+
+#include <math.h>
+#include <algorithm>
+
+
 
 template<typename T>
 T Stack<T>::Pop()
@@ -19,14 +34,14 @@ T Stack<T>::Peek()
 template<typename T>
 void Stack<T>::Push(T dataToPush)
 {
-    if (count < Size)
+    if (Count < Size)
     {
         Data[Count] = dataToPush;
         Count++;
     }
     else
     {
-        Cout << "cant add, stack full" << endl;
+        std::cout << "cant add, stack full" << std::endl;
     }
 }
 
@@ -40,7 +55,7 @@ Stack<T>::Stack()
 template<typename T>
 Queue<T>::Queue()
 {
-    Data = new T[10]
+    Data = new T[10];
         Size = 10;
 }
 
@@ -59,10 +74,9 @@ T Queue<T>::Peek()
 template<typename T>
 T Queue<T>::Pop()
 {
-    if (Count !> 0)
+    if (Count > 0)
     {
-
-        Count = [Count - Count];
+        Count--;
     }
     return Data[Count];
 }

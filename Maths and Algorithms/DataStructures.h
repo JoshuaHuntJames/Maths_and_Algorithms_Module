@@ -27,6 +27,8 @@ public:
     T* Data;
     size_t Size;
 
+    int Count = 0;
+
     Queue();
 
     T Pop();
