@@ -1,4 +1,5 @@
-﻿  DataStructures.cpp
+﻿  Algorithms.cpp
+  DataStructures.cpp
 D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Maths.h(11,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'DataStructures.cpp')
   
@@ -8,4 +9,15 @@ D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Maths.h(18,19): warnin
 D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Maths.h(26,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'DataStructures.cpp')
   
+  Maths and Algorithms.cpp
+D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Maths.h(11,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Maths%20and%20Algorithms.cpp')
+  
+D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Maths.h(18,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Maths%20and%20Algorithms.cpp')
+  
+D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Maths.h(26,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Maths%20and%20Algorithms.cpp')
+  
+  Generating Code...
   Maths and Algorithms.vcxproj -> D:\Unity\Maths_and_Algorithms_Module\x64\Debug\Maths and Algorithms.exe
