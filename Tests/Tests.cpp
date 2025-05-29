@@ -1,103 +1,134 @@
 #include "pch.h"
-//#include "CppUnitTest.h"
-//#include "../Maths and Algorithms/Algorithms.h"
-//#include "../Maths and Algorithms/DataStructures.h"
-//#include "../Maths and Algorithms/Maths.h"
-//#include "../Maths and Algorithms/Matrix.h"
-//#include "../Maths and Algorithms/Vector.h"
+#include "CppUnitTest.H"
+
+//#include "../MATHS AND ALGORITHMS/ALGORITHMS.H"
+#include "../MATHS AND ALGORITHMS/DataStructures.h"
+//#include "../MATHS AND ALGORITHMS/DATASTRUCTURES.H"
+//#include "../MATHS AND ALGORITHMS/MATHS.H"
+//#include "../MATHS AND ALGORITHMS/MATRIX.H"
+//#include "../MATHS AND ALGORITHMS/VECTOR.H"
+
+//#INCLUDE ""
 //
-//#include ""
-//
-//using namespace Microsoft::VisualStudio::CppUnitTestFramework;
-//
-//namespace Tests
-//{
-//	TEST_CLASS(Algorithms)
-//	{
-//	public:
-//		
-//		TEST_METHOD(StackPushPopTest)
-//		{
-//			// Arrange
-//			Stack<int> stack;
-//			int dataToPush = 5;
-//
-//			// Act
-//			stack.Push(dataToPush);
-//			int poppedData = stack.Pop();
-//
-//			// Assert
-//			Assert::AreEqual(5, poppedData, L"Pop() did not return the expected value");
-//		}
-//
-//		TEST_METHOD(StackPeekTest)
-//		{
-//			// Arrange
-//			Stack<int> stack;
-//			int dataToPush = 5;
-//
-//			// Act
-//			stack.Push(dataToPush);
-//			int peekedData = stack.Peek();
-//
-//			// Assert
-//			Assert::AreEqual(5, peekedData, L"Peek() did not return the expected value");
-//		}
-//
-//		TEST_METHOD(StackPushMultipleTest)
-//		{
-//			// Arrange
-//			Stack<int> stack;
-//
-//			// Act
-//			stack.Push(1);
-//			stack.Push(2);
-//			stack.Push(3);
-//
-//			// Assert
-//			Assert::AreEqual(3, int(stack.Size), L"Size is incorrect after pushing multiple elements");
-//		}
-//		TEST_METHOD(QueuePushPopTest)
-//		{
-//			// Arrange
-//			Queue<int> queue;
-//			int dataToPush = 5;
-//
-//			// Act
-//			queue.Push(dataToPush);
-//			int poppedData = queue.Pop();
-//
-//			// Assert
-//			Assert::AreEqual(5, poppedData, L"Pop() did not return the expected value");
-//		}
-//
-//		TEST_METHOD(QueuePeekTest)
-//		{
-//			// Arrange
-//			Queue<int> queue;
-//			int dataToPush = 5;
-//
-//			// Act
-//			queue.Push(dataToPush);
-//			int peekedData = queue.Peek();
-//
-//			// Assert
-//			Assert::AreEqual(5, peekedData, L"Peek() did not return the expected value");
-//		}
-//
-//		TEST_METHOD(QueuePushMultipleTest)
-//		{
-//			// Arrange
-//			Queue<int> queue;
-//
-//			// Act
-//			queue.Push(1);
-//			queue.Push(2);
-//			queue.Push(3);
-//
-//			// Assert
-//			Assert::AreEqual(3, int(queue.Size), L"Size is incorrect after pushing multiple elements");
-//		}
+
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
+namespace TESTS
+{
+    TEST_CLASS(ALGORITHMS)
+    {
+    public:
+        TEST_METHOD(STACKPUSHPOPTEST)
+        {
+            // ARRANGE
+            Stack<int> STACK;
+            //Stack<int> STACK;
+            int DATATOPUSH = 5;
+
+            // ACT
+            STACK.Push(DATATOPUSH);
+            int POPPEDDATA = STACK.Pop();
+
+            // ASSERT
+            Assert::AreEqual(5, POPPEDDATA, L"POP() DID NOT RETURN THE EXPECTED VALUE");
+        }
+
+        TEST_METHOD(STACKPEEKTEST)
+        {
+            // ARRANGE
+            Stack<int> STACK;
+            int DATATOPUSH = 5;
+
+            // ACT
+            STACK.Push(DATATOPUSH);
+            int PEEKEDDATA = STACK.Peek();
+
+            // ASSERT
+            Assert::AreEqual(5, PEEKEDDATA, L"PEEK() DID NOT RETURN THE EXPECTED VALUE");
+        }
+
+        TEST_METHOD(STACKPUSHMULTIPLETEST)
+        {
+            // ARRANGE
+            Stack<int> STACK;
+
+            // ACT
+            STACK.Push(1);
+            STACK.Push(2);
+            STACK.Push(3);
+
+            // ASSERT
+            Assert::AreEqual(3, int(STACK.Count), L"SIZE IS INCORRECT AFTER PUSHING MULTIPLE ELEMENTS");
+        }
+
+        TEST_METHOD(QUEUEPUSHPOPTEST)
+        {
+            // ARRANGE
+            Queue<int> QUEUE;
+            int DATATOPUSH = 5;
+
+            // ACT
+            QUEUE.Push(DATATOPUSH);
+            int POPPEDDATA = QUEUE.Pop();
+
+            // ASSERT
+            Assert::AreEqual(5, POPPEDDATA, L"POP() DID NOT RETURN THE EXPECTED VALUE");
+        }
+
+        TEST_METHOD(QUEUEPEEKTEST)
+        {
+            // ARRANGE
+            Queue<int> QUEUE;
+            int DATATOPUSH = 5;
+
+            // ACT
+            QUEUE.Push(DATATOPUSH);
+            QUEUE.Push(10);
+            int PEEKEDDATA = QUEUE.Peek();
+
+            // ASSERT
+            Assert::AreEqual(5, PEEKEDDATA, L"PEEK() DID NOT RETURN THE EXPECTED VALUE");
+        }
+
+        TEST_METHOD(QUEUEPUSHMULTIPLETEST)
+        {
+            // ARRANGE
+            Queue<int> QUEUE;
+
+            // ACT
+            QUEUE.Push(1);
+            QUEUE.Push(2);
+            QUEUE.Push(3);
+
+            // ASSERT
+            Assert::AreEqual(3, int(QUEUE.Count), L"SIZE IS INCORRECT AFTER PUSHING MULTIPLE ELEMENTS");
+        }
+
+        TEST_METHOD(QUEUEPUSHFULLTEST)
+        {
+            // ARRANGE
+            Queue<int> QUEUE;
+
+            // ACT
+            QUEUE.Push(1);
+            QUEUE.Push(2);
+            QUEUE.Push(3);
+            QUEUE.Push(4);
+            QUEUE.Push(5);
+            QUEUE.Push(6);
+            QUEUE.Push(7);
+            QUEUE.Push(8);
+            QUEUE.Push(9);
+            QUEUE.Push(10);
+            QUEUE.Push(11);
+            QUEUE.Push(12);
+
+            // ASSERT
+            Assert::AreEqual(10, int(QUEUE.Count), L"SIZE IS INCORRECT AFTER PUSHING MULTIPLE ELEMENTS");
+        }
+    };
+}
+
 //
 //		TEST_METHOD(NodeInitializationTest)
 //		{

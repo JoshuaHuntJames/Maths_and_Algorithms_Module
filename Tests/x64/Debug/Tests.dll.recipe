@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\Games\Documents\GitHub\Maths_and_Algorithms_Module\x64\Debug\Maths and Algorithms.exe</FullPath>
+      <FullPath>D:\Unity\Maths_and_Algorithms_Module\x64\Debug\Maths and Algorithms.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\Games\Documents\GitHub\Maths_and_Algorithms_Module\x64\Debug\Tests.dll</FullPath>
+      <FullPath>D:\Unity\Maths_and_Algorithms_Module\x64\Debug\Tests.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
