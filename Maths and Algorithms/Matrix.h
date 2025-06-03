@@ -1,37 +1,111 @@
 #pragma once
 #include "Vector.h"
+#include <iostream>
+#include <iomanip>
+#include <numbers>
 
+using namespace std;
 
 class Matrix
 {
 public:
-	//this is a 3 x 3
+    // this is a 3 x 3
+#define M_PI 3.14159265358979323846
+    float Data[3][3];
 
-	float Data[3][3] ;
+    Matrix operator* (Matrix& RHS)
+    {
+        Matrix result = *this;
 
-	float Determinate();
+        for (int row = 0; row < 3; ++row)
+        {
+            for (int col = 0; col < 3; ++col)
+            {
+                result.Data[row][col] = 0.0f;
+                for (int k = 0; k < 3; ++k)
+                {
+                    result.Data[row][col] += this->Data[row][k] * RHS.Data[k][col];
+                }
+            }
+        }
+        return result;
+    }
 
-	void SetRotateAroundX(float Angle);
-	void SetRotateAroundY(float Angle);
-	void SetRotateAroundZ(float Angle);
+    void SetMatrix(const float input[3][3])
+    {
+        for (int i = 0; i < 3; ++i)
+            for (int j = 0; j < 3; ++j)
+                Data[i][j] = input[i][j];
+    }
 
-	Matrix operator* (Matrix& RHS)
-	{
-		Matrix& LHS = *this;
+    float Determinate()
+    {
+        float a = Data[0][0], b = Data[0][1], c = Data[0][2];
+        float d = Data[1][0], e = Data[1][1], f = Data[1][2];
+        float g = Data[2][0], h = Data[2][1], i = Data[2][2];
 
-		//fill this in to multiply Matrix LHS by Matrix RHS
+        return a * (e * i - f * h)
+            - b * (d * i - f * g)
+            + c * (d * h - e * g);
+    }
 
-		return LHS;
-	}
-	Vector operator* (Vector& RHS)
-	{
-		Matrix& LHS = *this;
+    void Print() const
+    {
+        std::cout << "Matrix contents:\n";
+        for (int i = 0; i < 3; ++i)
+        {
+            for (int j = 0; j < 3; ++j)
+            {
+                std::cout << std::setw(8) << std::fixed << std::setprecision(4) << Data[i][j] << " ";
+            }
+            std::cout << std::endl;
+        }
+    }
 
-		//fill this in to multiply Matrix LHS by Vector RHS
-		return Vector(0, 0, 0);
-	}
+    void SetRotateAroundX(float Angle)
+    {
+        std::cout << "SetRotateAroundX " << Angle;
+        float rad = Angle * M_PI / 180.0f;
+        float cosA = cos(rad);
+        float sinA = sin(rad);
 
-	void Translate(Vector delta);
-	void SetMatrix(int[3][3]);
+        std::cout << "1,1 " << cosA << std::endl;
+        std::cout << "1,2 " << -sinA << std::endl;
+        std::cout << "2,1 " << sinA << std::endl;
+        std::cout << "2,2 " << cosA << std::endl;
+
+        Data[0][0] = 1; Data[0][1] = 0;    Data[0][2] = 0;
+        Data[1][0] = 0; Data[1][1] = cosA; Data[1][2] = -sinA;
+        Data[2][0] = 0; Data[2][1] = sinA; Data[2][2] = cosA;
+    }
+
+    void SetRotateAroundY(float Angle)
+    {
+        std::cout << "SetRotateAroundY " << Angle;
+        float rad = Angle * M_PI / 180.0f;
+        float cosA = cos(rad);
+        float sinA = sin(rad);
+
+        Data[0][0] = cosA;  Data[0][1] = 0; Data[0][2] = sinA;
+        Data[1][0] = 0;     Data[1][1] = 1; Data[1][2] = 0;
+        Data[2][0] = -sinA; Data[2][1] = 0; Data[2][2] = cosA;
+    }
+
+    void SetRotateAroundZ(float Angle)
+    {
+        std::cout << "SetRotateAroundZ " << Angle;
+        float rad = Angle * M_PI / 180.0f;
+        float cosA = cos(rad);
+        float sinA = sin(rad);
+
+        Data[0][0] = cosA; Data[0][1] = -sinA; Data[0][2] = 0;
+        Data[1][0] = sinA; Data[1][1] = cosA;  Data[1][2] = 0;
+        Data[2][0] = 0;    Data[2][1] = 0;     Data[2][2] = 1;
+    }
+
+    void Translate(const Vector& delta)
+    {
+        Data[0][2] = delta.x;
+        Data[1][2] = delta.y;
+    }
 };
-

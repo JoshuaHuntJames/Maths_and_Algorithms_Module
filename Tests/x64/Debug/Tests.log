@@ -1,2 +1,13 @@
 ﻿  Tests.cpp
+H:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\numbers(11): warning STL4038: The contents of <numbers> are available only with C++20 or later.
+D:\Unity\Maths_and_Algorithms_Module\MATHS AND ALGORITHMS\Matrix.H(68,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '/Tests.cpp')
+  
+D:\Unity\Maths_and_Algorithms_Module\MATHS AND ALGORITHMS\Matrix.H(85,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '/Tests.cpp')
+  
+D:\Unity\Maths_and_Algorithms_Module\MATHS AND ALGORITHMS\Matrix.H(97,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  (compiling source file '/Tests.cpp')
+  
+     Creating library D:\Unity\Maths_and_Algorithms_Module\x64\Debug\Tests.lib and object D:\Unity\Maths_and_Algorithms_Module\x64\Debug\Tests.exp
   Tests.vcxproj -> D:\Unity\Maths_and_Algorithms_Module\x64\Debug\Tests.dll

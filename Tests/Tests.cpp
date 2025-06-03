@@ -5,7 +5,7 @@
 #include "../MATHS AND ALGORITHMS/DataStructures.h"
 //#include "../MATHS AND ALGORITHMS/DATASTRUCTURES.H"
 //#include "../MATHS AND ALGORITHMS/MATHS.H"
-//#include "../MATHS AND ALGORITHMS/MATRIX.H"
+#include "../MATHS AND ALGORITHMS/Matrix.H"
 //#include "../MATHS AND ALGORITHMS/VECTOR.H"
 
 //#INCLUDE ""
@@ -539,187 +539,212 @@ namespace TESTS
 //		}
 //
 //	};
-//	TEST_CLASS(Matrices)
-//	{
-//	public:
-//
-//		TEST_METHOD(DeterminateTest)
-//		{
-//			// Arrange
-//			Matrix matrix;
-//			// Fill in matrix with appropriate values
-//
-//			matrix.Data[0][0] = 1.0f;
-//			matrix.Data[0][1] = 2.0f;
-//			matrix.Data[0][2] = 3.0f;
-//			matrix.Data[1][0] = 4.0f;
-//			matrix.Data[1][1] = 5.0f;
-//			matrix.Data[1][2] = 6.0f;
-//			matrix.Data[2][0] = 7.0f;
-//			matrix.Data[2][1] = 8.0f;
-//			matrix.Data[2][2] = 9.0f;
-//
-//			// Calculate the expected determinant manually
-//			// Calculate the expected determinant manually
-//			float expectedDeterminant = 0;
-//
-//
-//			// Act
-//			float det = matrix.Determinate();
-//
-//			// Assert
-//			Assert::AreEqual(expectedDeterminant, det, 0.0001f, L"Determinant is incorrect");
-//		}
-//
-//		TEST_METHOD(RotateAroundXTest)
-//		{
-//			// Arrange
-//			Matrix matrix;
-//			// Fill in matrix with appropriate values
-//			float angle = 45.0f; // Example angle
-//			matrix.Data[0][0] = 1.0f;
-//			matrix.Data[0][1] = 0.0f;
-//			matrix.Data[0][2] = 1.0f;
-//			
-//			matrix.Data[1][0] = 0.0f;
-//			matrix.Data[1][1] = 1.0f;
-//			matrix.Data[1][2] = 0.0f;
-//			
-//			matrix.Data[2][0] = 1.0f;
-//			matrix.Data[2][1] = 1.0f;
-//			matrix.Data[2][2] = 1.0f;
-//
-//			// Act
-//			matrix.SetRotateAroundX(angle);
-//
-//			Assert::AreEqual(matrix.Data[1][1], 0.707f, 0.0001f, L"Rotated element is incorrect");
-//			Assert::AreEqual(matrix.Data[1][2], 0.293f, 0.0001f, L"Rotated element is incorrect");
-//
-//			Assert::AreEqual(matrix.Data[2][1], 0.707f, 0.0001f, L"Rotated element is incorrect");
-//			Assert::AreEqual(matrix.Data[2][2], 1.707f, 0.0001f, L"Rotated element is incorrect");
-//		}
-//
-//		TEST_METHOD(RotateAroundYTest)
-//		{
-//			// Arrange
-//			Matrix matrix;
-//			// Fill in matrix with appropriate values
-//			float angle = 45.0f; // Example angle
-//
-//			matrix.Data[0][0] = 1.0f;
-//			matrix.Data[0][1] = 0.0f;
-//			matrix.Data[0][2] = 1.0f;
-//
-//			matrix.Data[1][0] = 0.0f;
-//			matrix.Data[1][1] = 1.0f;
-//			matrix.Data[1][2] = 0.0f;
-//
-//			matrix.Data[2][0] = 1.0f;
-//			matrix.Data[2][1] = 1.0f;
-//			matrix.Data[2][2] = 1.0f;
-//
-//			// Act
-//			matrix.SetRotateAroundY(angle);
-//
-//			// Assert
-//			// Verify that the matrix is rotated correctly
-//			// You may need to manually calculate the expected values
-//			// or use known test cases to verify the rotation
-//
-//			Assert::AreEqual(matrix.Data[0][0], 1.0f, 0.0001f, L"Rotated element is incorrect");
-//			Assert::AreEqual(matrix.Data[0][2], 1.707f, 0.0001f, L"Rotated element is incorrect");
-//
-//			Assert::AreEqual(matrix.Data[2][0], -1.0f, 0.0001f, L"Rotated element is incorrect");
-//			Assert::AreEqual(matrix.Data[2][2], 0.707f, 0.0001f, L"Rotated element is incorrect");
-//		}
-//
-//		TEST_METHOD(RotateAroundZTest)
-//		{
-//			// Arrange
-//			Matrix matrix;
-//			// Fill in matrix with appropriate values
-//			float angle = 45.0f; // Example angle
-//
-//			matrix.Data[0][0] = 1.0f;
-//			matrix.Data[0][1] = 0.0f;
-//			matrix.Data[0][2] = 1.0f;
-//
-//			matrix.Data[1][0] = 0.0f;
-//			matrix.Data[1][1] = 1.0f;
-//			matrix.Data[1][2] = 0.0f;
-//
-//			matrix.Data[2][0] = 1.0f;
-//			matrix.Data[2][1] = 1.0f;
-//			matrix.Data[2][2] = 1.0f;
-//
-//			// Act
-//			matrix.SetRotateAroundZ(angle);
-//
-//			// Assert
-//			// Verify that the matrix is rotated correctly
-//			// You may need to manually calculate the expected values
-//			// or use known test cases to verify the rotation
-//
-//			Assert::AreEqual(matrix.Data[0][0], 1.0f, 0.0001f, L"Rotated element is incorrect");
-//			Assert::AreEqual(matrix.Data[0][1], 0.0f, 0.0001f, L"Rotated element is incorrect");
-//
-//			Assert::AreEqual(matrix.Data[1][0], 0.0f, 0.0001f, L"Rotated element is incorrect");
-//			Assert::AreEqual(matrix.Data[1][1], 1.0f, 0.0001f, L"Rotated element is incorrect");
-//		}
-//
-//		TEST_METHOD(TranslateTest)
-//		{
-//			// Arrange
-//			Matrix matrix;
-//			matrix.Data[0][0] = 1.0f;
-//			matrix.Data[0][1] = 0.0f;
-//			matrix.Data[0][2] = 1.0f;
-//
-//			matrix.Data[1][0] = 0.0f;
-//			matrix.Data[1][1] = 1.0f;
-//			matrix.Data[1][2] = 0.0f;
-//
-//			matrix.Data[2][0] = 1.0f;
-//			matrix.Data[2][1] = 1.0f;
-//			matrix.Data[2][2] = 1.0f;
-//			Vector delta(1.0f, 2.0f, 3.0f); // Example translation vector
-//
-//			// Act
-//			matrix.Translate(delta);
-//
-//			Assert::AreEqual(matrix.Data[0][2], 2.0f, 0.0001f, L"Translate element is incorrect");
-//			Assert::AreEqual(matrix.Data[1][2], 3.0f, 0.0001f, L"Translate element is incorrect");
-//			Assert::AreEqual(matrix.Data[2][2], 4.0f, 0.0001f, L"Translate element is incorrect");
-//		}
-//
-//		
-//
-//		TEST_METHOD(MatrixMultiplicationTest)
-//		{
-//			// Arrange
-//			Matrix matrix1;
-//			// Initialize matrix1 with some values
-//			int A[3][3] = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
-//			matrix1.SetMatrix(A);
-//
-//			Matrix matrix2;
-//			// Initialize matrix2 with some values
-//			int B[3][3] = { {9, 8, 7}, {6, 5, 4}, {3, 2, 1} };
-//			matrix2.SetMatrix(B);
-//
-//			// Act
-//			Matrix result = matrix1 * matrix2;
-//
-//			// Assert
-//			Assert::AreEqual(result.Data[0][0], 30, 0.0001f, L"multiplication of matraces is incorrect");
-//			Assert::AreEqual(result.Data[0][1], 24, 0.0001f, L"multiplication of matraces is incorrect");
-//			Assert::AreEqual(result.Data[0][2], 18, 0.0001f, L"multiplication of matraces is incorrect");
-//			Assert::AreEqual(result.Data[1][0], 84, 0.0001f, L"multiplication of matraces is incorrect");
-//			Assert::AreEqual(result.Data[1][1], 69, 0.0001f, L"multiplication of matraces is incorrect");
-//			Assert::AreEqual(result.Data[1][2], 54, 0.0001f, L"multiplication of matraces is incorrect");
-//			Assert::AreEqual(result.Data[2][0], 138, 0.0001f, L"multiplication of matraces is incorrect");
-//			Assert::AreEqual(result.Data[2][1], 114, 0.0001f, L"multiplication of matraces is incorrect");
-//			Assert::AreEqual(result.Data[2][2], 90, 0.0001f, L"multiplication of matraces is incorrect");
-//		}
-//	};
+	TEST_CLASS(Matrices)
+	{
+	public:
+
+		TEST_METHOD(DETERMINATETEST)
+		{
+			// ARRANGE
+			Matrix MATRIX;
+			// FILL IN MATRIX WITH APPROPRIATE VALUES
+			float sample[3][3] = {
+				{3, 2, 1},
+				{1, 0, 2},
+				{4, 1, 3}
+			};
+
+			MATRIX.SetMatrix(sample);
+
+			// EXPECTED DETERMINANT calculated manually
+			float EXPECTEDDETERMINANT = 5.0f;
+
+			// ACT
+			float DET = MATRIX.Determinate();
+
+			// ASSERT
+			Assert::AreEqual(EXPECTEDDETERMINANT, DET, 0.0001F, L"DETERMINANT IS INCORRECT");
+		}
+
+        TEST_METHOD(ROTATEAROUNDXTEST)
+        {
+            // ARRANGE
+            // create 3 matrices for the original; the rotation matrix and the result of the transformation
+            Matrix originalMatrix = { 0 };
+            Matrix rotationMatrix = { 0 };
+            Matrix transformationMatrix = { 0 };
+
+            // FILL IN MATRIX WITH APPROPRIATE VALUES
+            float ANGLE = 45.0F; // ANGLE to rotate
+
+            originalMatrix.Data[0][0] = 1.0F;
+            originalMatrix.Data[0][1] = 0.0F;
+            originalMatrix.Data[0][2] = 1.0F;
+
+            originalMatrix.Data[1][0] = 0.0F;
+            originalMatrix.Data[1][1] = 1.0F;
+            originalMatrix.Data[1][2] = 0.0F;
+
+            originalMatrix.Data[2][0] = 1.0F;
+            originalMatrix.Data[2][1] = 1.0F;
+            originalMatrix.Data[2][2] = 1.0F;
+
+            // ACT
+            // set the rotation matrix transform
+            rotationMatrix.SetRotateAroundX(ANGLE);
+
+            // apply the rotation matrix to the original matrix by multiplying them together
+            transformationMatrix = originalMatrix * rotationMatrix;
+
+            // print the matrices to std out
+            rotationMatrix.Print();
+            transformationMatrix.Print();
+
+            Assert::AreEqual(0.707f, transformationMatrix.Data[1][1], 0.001f, L"a. ROTATED ELEMENT IS INCORRECT");
+            Assert::AreEqual(-0.707f, transformationMatrix.Data[1][2], 0.001f, L"b. ROTATED ELEMENT IS INCORRECT");
+
+            Assert::AreEqual(1.41421f, transformationMatrix.Data[2][1], 0.001f, L"c. ROTATED ELEMENT IS INCORRECT");
+            Assert::AreEqual(0.0f, transformationMatrix.Data[2][2], 0.001f, L"d. ROTATED ELEMENT IS INCORRECT");
+        }
+
+        TEST_METHOD(ROTATEAROUNDYTEST)
+        {
+            // ARRANGE
+            // create 3 matrices for the original; the rotation matrix and the result of the transformation
+            Matrix originalMatrix = { 0 };
+            Matrix rotationMatrix = { 0 };
+            Matrix transformationMatrix = { 0 };
+
+            // FILL IN MATRIX WITH APPROPRIATE VALUES
+            float ANGLE = 45.0F; // ANGLE to rotate
+
+            originalMatrix.Data[0][0] = 1.0F;
+            originalMatrix.Data[0][1] = 0.0F;
+            originalMatrix.Data[0][2] = 1.0F;
+
+            originalMatrix.Data[1][0] = 0.0F;
+            originalMatrix.Data[1][1] = 1.0F;
+            originalMatrix.Data[1][2] = 0.0F;
+
+            originalMatrix.Data[2][0] = 1.0F;
+            originalMatrix.Data[2][1] = 1.0F;
+            originalMatrix.Data[2][2] = 1.0F;
+
+            // ACT
+            // set the rotation matrix transform
+            rotationMatrix.SetRotateAroundY(ANGLE);
+
+            // apply the rotation matrix to the original matrix by multiplying them together
+            transformationMatrix = originalMatrix * rotationMatrix;
+
+            // print the matrices to std out
+            rotationMatrix.Print();
+            transformationMatrix.Print();
+
+            // ASSERT
+            Assert::AreEqual(0.0f, transformationMatrix.Data[0][0], 0.001f, L"a. ROTATED ELEMENT IS INCORRECT");
+            Assert::AreEqual(1.4142f, transformationMatrix.Data[0][2], 0.001f, L"b. ROTATED ELEMENT IS INCORRECT");
+
+            Assert::AreEqual(0.0f, transformationMatrix.Data[2][0], 0.001f, L"c. ROTATED ELEMENT IS INCORRECT");
+            Assert::AreEqual(1.4142f, transformationMatrix.Data[2][2], 0.001f, L"d. ROTATED ELEMENT IS INCORRECT");
+        }
+    
+
+        TEST_METHOD(ROTATEAROUNDZTEST)
+        {
+            // ARRANGE
+            // create 3 matrices for the original; the rotation matrix and the result of the transformation
+            Matrix originalMatrix = { 0 };
+            Matrix rotationMatrix = { 0 };
+            Matrix transformationMatrix = { 0 };
+
+            // FILL IN MATRIX WITH APPROPRIATE VALUES
+            float ANGLE = 45.0F; // ANGLE to rotate
+
+            originalMatrix.Data[0][0] = 1.0F;
+            originalMatrix.Data[0][1] = 0.0F;
+            originalMatrix.Data[0][2] = 1.0F;
+
+            originalMatrix.Data[1][0] = 0.0F;
+            originalMatrix.Data[1][1] = 1.0F;
+            originalMatrix.Data[1][2] = 0.0F;
+
+            originalMatrix.Data[2][0] = 1.0F;
+            originalMatrix.Data[2][1] = 1.0F;
+            originalMatrix.Data[2][2] = 1.0F;
+
+            // ACT
+            // set the rotation matrix transform
+            rotationMatrix.SetRotateAroundZ(ANGLE);
+
+            // apply the rotation matrix to the original matrix by multiplying them together
+            transformationMatrix = originalMatrix * rotationMatrix;
+
+            // print the matrices to std out
+            rotationMatrix.Print();
+            transformationMatrix.Print();
+
+            Assert::AreEqual(transformationMatrix.Data[0][0], 0.7071f, 0.0001f, L"a. ROTATED ELEMENT IS INCORRECT");
+            Assert::AreEqual(transformationMatrix.Data[0][1], -0.7071f, 0.0001f, L"b. ROTATED ELEMENT IS INCORRECT");
+
+            Assert::AreEqual(transformationMatrix.Data[1][0], 0.7071f, 0.7071f, L"c. ROTATED ELEMENT IS INCORRECT");
+            Assert::AreEqual(transformationMatrix.Data[1][1], 0.7071f, 0.0001f, L"d. ROTATED ELEMENT IS INCORRECT");
+        }
+
+
+		TEST_METHOD(TranslateTest)
+		{
+			// Arrange
+			Matrix matrix;
+			matrix.Data[0][0] = 1.0f;
+			matrix.Data[0][1] = 0.0f;
+			matrix.Data[0][2] = 1.0f;
+
+			matrix.Data[1][0] = 0.0f;
+			matrix.Data[1][1] = 1.0f;
+			matrix.Data[1][2] = 0.0f;
+
+			matrix.Data[2][0] = 1.0f;
+			matrix.Data[2][1] = 1.0f;
+			matrix.Data[2][2] = 1.0f;
+			Vector delta(1.0f, 2.0f, 3.0f); // Example translation vector
+
+			// Act
+			matrix.Translate(delta);
+
+			Assert::AreEqual(matrix.Data[0][2], 2.0f, 0.0001f, L"Translate element is incorrect");
+			Assert::AreEqual(matrix.Data[1][2], 3.0f, 0.0001f, L"Translate element is incorrect");
+			Assert::AreEqual(matrix.Data[2][2], 4.0f, 0.0001f, L"Translate element is incorrect");
+		}
+
+		
+
+        TEST_METHOD(MATRIXMULTIPLICATIONTEST)
+        {
+            // ARRANGE
+            Matrix matrix1 = { 0 };
+            // INITIALIZE MATRIX1
+            float A[3][3] = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+            matrix1.SetMatrix(A);
+
+            Matrix matrix2 = { 0 };
+            // INITIALIZE MATRIX2
+            float B[3][3] = { {9, 8, 7}, {6, 5, 4}, {3, 2, 1} };
+            matrix2.SetMatrix(B);
+
+            // ACT
+            Matrix RESULT = matrix1 * matrix2;
+
+            // ASSERT
+            Assert::AreEqual(RESULT.Data[0][0], 30, 0.0001F, L"a. MULTIPLICATION OF MATRICES IS INCORRECT");
+            Assert::AreEqual(RESULT.Data[0][1], 24, 0.0001F, L"b. MULTIPLICATION OF MATRICES IS INCORRECT");
+            Assert::AreEqual(RESULT.Data[0][2], 18, 0.0001F, L"c. MULTIPLICATION OF MATRICES IS INCORRECT");
+            Assert::AreEqual(RESULT.Data[1][0], 84, 0.0001F, L"d. MULTIPLICATION OF MATRICES IS INCORRECT");
+            Assert::AreEqual(RESULT.Data[1][1], 69, 0.0001F, L"e. MULTIPLICATION OF MATRICES IS INCORRECT");
+            Assert::AreEqual(RESULT.Data[1][2], 54, 0.0001F, L"f. MULTIPLICATION OF MATRICES IS INCORRECT");
+            Assert::AreEqual(RESULT.Data[2][0], 138, 0.0001F, L"g. MULTIPLICATION OF MATRICES IS INCORRECT");
+            Assert::AreEqual(RESULT.Data[2][1], 114, 0.0001F, L"h. MULTIPLICATION OF MATRICES IS INCORRECT");
+            Assert::AreEqual(RESULT.Data[2][2], 90, 0.0001F, L"i. MULTIPLICATION OF MATRICES IS INCORRECT");
+        }
+	};
 //}

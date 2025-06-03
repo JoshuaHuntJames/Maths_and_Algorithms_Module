@@ -1,4 +1,24 @@
-﻿  Maths and Algorithms.cpp
+﻿  DataStructures.cpp
+H:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\numbers(11): warning STL4038: The contents of <numbers> are available only with C++20 or later.
+D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Maths.h(11,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'DataStructures.cpp')
+  
+D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Maths.h(18,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'DataStructures.cpp')
+  
+D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Maths.h(26,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'DataStructures.cpp')
+  
+D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Matrix.h(68,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'DataStructures.cpp')
+  
+D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Matrix.h(85,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'DataStructures.cpp')
+  
+D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Matrix.h(97,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'DataStructures.cpp')
+  
+  Maths and Algorithms.cpp
 D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Maths.h(11,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'Maths%20and%20Algorithms.cpp')
   
@@ -8,4 +28,26 @@ D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Maths.h(18,19): warnin
 D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Maths.h(26,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'Maths%20and%20Algorithms.cpp')
   
+H:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\numbers(11): warning STL4038: The contents of <numbers> are available only with C++20 or later.
+D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Matrix.h(68,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Maths%20and%20Algorithms.cpp')
+  
+D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Matrix.h(85,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Maths%20and%20Algorithms.cpp')
+  
+D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Matrix.h(97,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Maths%20and%20Algorithms.cpp')
+  
+  Matrix.cpp
+H:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\numbers(11): warning STL4038: The contents of <numbers> are available only with C++20 or later.
+D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Matrix.h(68,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Matrix.cpp')
+  
+D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Matrix.h(85,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Matrix.cpp')
+  
+D:\Unity\Maths_and_Algorithms_Module\Maths and Algorithms\Matrix.h(97,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'Matrix.cpp')
+  
+  Generating Code...
   Maths and Algorithms.vcxproj -> D:\Unity\Maths_and_Algorithms_Module\x64\Debug\Maths and Algorithms.exe
