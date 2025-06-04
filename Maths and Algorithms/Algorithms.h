@@ -5,17 +5,18 @@ namespace Algorithms
 {
 	inline int* BubbleSort(int* Data, size_t Size)
 	{
-		for (int i = 0; i < Size; i++)
+		for (size_t i = 0; i < Size - 1; i++)  // Outer loop ensures multiple passes
 		{
-			if (Data[i] > Data[i + 1])
+			for (size_t j = 0; j < Size - i - 1; j++)  // Inner loop for adjacent swaps
 			{
-
-				int j = Data[i];
-				Data[i] = Data[i + 1];
-				Data[i + 1] = j;
-
+				if (Data[j] > Data[j + 1])
+				{
+					// Swap
+					int temp = Data[j];
+					Data[j] = Data[j + 1];
+					Data[j + 1] = temp;
+				}
 			}
-
 		}
 		return Data;
 	}
